@@ -20,10 +20,14 @@
         Should not be empty</mat-error>
     </mat-form-field>
     <button class="login__btn"
+            *ngIf="!isLoading"
             mat-raised-button
             type="submit"
             color="primary"
             [disabled]="loginForm.invalid">
       Login</button>
+      <mat-spinner *ngIf="isLoading"
+                   class="login__spinner">
+      </mat-spinner>
   </form>
 </section>

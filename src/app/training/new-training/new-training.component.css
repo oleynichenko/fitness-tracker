@@ -1,3 +1,17 @@
 .new-training {
   padding-top: 30px;
 }
+
+.new-training__spinner {
+  height: 120px;
+}
+
+.new-training__title {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.new-training__stumb {
+  width: 100%;
+  height: 1px;
+}

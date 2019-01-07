@@ -5,21 +5,21 @@
     </button>
   </div>
   <div>
-    <a routerLink="/">LOGO</a>
+    <a class="header__logo" routerLink="/">Fitness Tracker</a>
   </div>
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-    <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+    <ul fxLayout fxLayoutGap="10px" class="header__menu">
       <li *ngIf="!isAuth">
-        <a routerLink="/signup">Signup</a>
+        <a class="header__link" routerLink="/signup">Signup</a>
       </li>
       <li *ngIf="!isAuth">
-        <a routerLink="/login">Login</a>
+        <a class="header__link" routerLink="/login">Login</a>
       </li>
       <li *ngIf="isAuth">
-        <a routerLink="/training">Training</a>
+        <a class="header__link" routerLink="/training">Training</a>
       </li>
       <li *ngIf="isAuth">
-        <a (click)="onLogout()">Logout</a>
+        <a class="header__link" (click)="onLogout()">Logout</a>
       </li>
     </ul>
   </div>

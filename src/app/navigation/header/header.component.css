@@ -1,22 +1,25 @@
-a {
-  text-decoration: none;
-  color: white;
-}
-
-ul li {
+.header__menu {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-a:hover,
-a:active {
+.header__logo:hover,
+.header__link:hover,
+.header__link:active {
   color: lightgray;
 }
 
-.navigation-items {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.header__link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.header__logo {
+  text-decoration: none;
+  color: white;
 }
 

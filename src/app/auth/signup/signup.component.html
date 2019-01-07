@@ -2,7 +2,7 @@
   <form fxLayout="column"
         fxLayoutGap="12px"
         #f="ngForm"
-        (click)="onSubmit(f)">
+        (ngSubmit)="onSubmit(f)">
     <mat-form-field>
       <input type="email"
              email
@@ -33,18 +33,24 @@
             [matDatepicker]="picker"
             placeholder="Your birthday"
             required
+            ngModel
             [max]="maxDate">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
     <mat-checkbox name="agree"
-                  required>
+                  required
+                  ngModel>
       Terms Policy</mat-checkbox>
     <button class="signup__btn"
+            *ngIf="!isLoading"
             mat-raised-button
             type="submit"
             color="primary"
             [disabled]="f.invalid">
       Sign Up</button>
+    <mat-spinner *ngIf="isLoading"
+                 class="signup__spinner">
+    </mat-spinner>
   </form>
 </section>

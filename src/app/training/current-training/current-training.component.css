@@ -1,3 +1,7 @@
 .current-training {
-  padding-top: 30px;
+  padding-top: 64px;
+}
+
+.current-training__phrase {
+  margin-bottom: 32px;
 }
